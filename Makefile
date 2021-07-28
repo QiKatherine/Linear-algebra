@@ -1,16 +1,9 @@
-#
-# Makefile
-# Libao Jin, 2021-07-28 17:04
-#
+LATEXMK = latexmk
+LMFLAGS = --xelatex --silent
+RM = rm -rf
+
 LATEXSRC = $(wildcard *.tex)
 TEXFILES = $(basename $(LATEXSRC))
-RM = rm
-
-# LaTeX
-LATEXMK = latexmk
-LMFLAGS = -xelatex -silent
-TEXFLAGS = -interaction=batchmode
-PANDOCFLAGS = -f markdown
 
 %.pdf: %.tex tex_distclean
 	$(LATEXMK) $(LMFLAGS) $<
@@ -27,6 +20,3 @@ tex_clean:
 tex_distclean: tex_clean
 	$(LATEXMK) -C
 	$(RM) $(TEXFILES:=.pdf)
-
-# vim:ft=make
-#
