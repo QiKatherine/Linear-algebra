@@ -15,11 +15,10 @@
 For linear equations:
 \begin{equation}
 \label{eq:3}
-\left\{
-\begin{array}{cc}
-2x-y=0\\
--x+2y=3
-\end{array}\right.
+\begin{cases}
+2x - y = 0 \\
+-x + 2y = 3
+\end{cases}
 \end{equation}
 
 We can write them in matrix multiplication form:
@@ -33,7 +32,7 @@ We can write them in matrix multiplication form:
 x\\y
 \end{array} \right] = \left[ \begin{array}{c}
 0\\3
-\end{array} \right] 
+\end{array} \right]
 \end{equation}
 where  $\boldsymbol{A}$ is the coefficient matrix, $\boldsymbol{x}$ is the
 unknown variable vector, $\boldsymbol{b}$ is the result vector, written as $\boldsymbol{Ax=b}$.
@@ -51,7 +50,7 @@ combinations of \textit{x} and \textit{y} produces the two dimentional plane.
 But in this case there is only a unique set combination produces $\boldsymbol{b}$.
 
 \begin{figure}[h]
-  \centering\includegraphics[scale=0.45]{1.png}
+  \centering\includegraphics[scale=0.45]{figures/1.png}
 \end{figure}
 
 The above interpretation applies to higher dimentional examples.
@@ -76,4 +75,4 @@ There are many benefits to consider matrix multiplication in {\color{red} column
 \subsection{Appendix}
 
 
-\end{document} 
+\end{document}
